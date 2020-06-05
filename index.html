@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button id="btn">发送数据查询数据库user-->>API</button>
+
+
+	<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script>
+      $("#btn").click(function() {
+        $.ajax({
+          method: "GET",
+          url: "http://127.0.0.1:1314/api/getUser",
+          data: {},
+          success: function(data) {
+            console.log(data);
+          },
+          error: function(err) {
+            console.log(err);
+          }
+        });
+      });
+    </script>
+</body>
+</html>
